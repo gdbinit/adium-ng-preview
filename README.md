@@ -48,3 +48,6 @@ If you want to do hipster open source shit and just bitch about this and that an
 * Get rid of libpurple or audit that shit (one of the reasons to support a single protocol)
 * Remove more fat still there
 * Some other stuff I can't remember right now :P
+
+## Hashes
+SHA256(Adium-NG-28-03-2017-Release-Debug.dmg)= 4787008bb3e58e731e8eef3e64818ba9c8d8c85e20ab365ca038d51d079c256f
