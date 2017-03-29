@@ -1,5 +1,7 @@
 # Adium-NG Preview
 
+**READ THIS FIRST IF YOU WANT TO TRY TO USE THIS SOFTWARE! THE SPECIAL NOTES IN PARTICULAR! **
+
 ## What is this?
 Adium-NG aims to be a fork of Adium <https://adium.im> with different goals. Adium original developers did great work in creating this nice application but today it suffers from too many problems, mostly stale development and outdated libraries. It also tries to do many things at the same time which I don't agree with.
 
@@ -42,21 +44,23 @@ If you want to do hipster open source shit and just bitch about this and that an
 
 ## Thanks
 * Original Adium developers for all their effort
+* SentinelOne <https://www.sentinelone.com>
 * Apple for the code signing certificate
 
 ## Special Notes
 * Adium-NG-29-03-2017-Release-signed-sandboxed-fixed.dmg
 
- This version is finally sandboxed. The sandbox is configured to run from /Applications, so if you want to test this you need to rename old Adium.app to something else. File transfers will not work since sandbox is already pretty tight. 
+This version is finally sandboxed. **The sandbox is configured to run only from /Applications/Adium.app, so if you want to test this you need to rename old Adium.app to something else. It will not work from anywhere else or any other name!** File transfers will not work since sandbox is already pretty tight. 
 
-Sandbox profile in Resources/adium_sandbox.sb. Any sandbox errors reports are welcome. 
+Sandbox profile in Resources/adium_sandbox.sb if you want to take a look. Any sandbox errors reports are welcome. 
 
-When you start AdiumNG it will try to create a folder ~/adium_sandboxtest to see if the sandbox is working. So error message in logs about this is expected. If it fails an alert will show up and app will not run.
+When you start AdiumNG it will try to create a folder ~/adium_sandboxtest to see if the sandbox is working as expected. If you see an error message in logs regarding this folder this is the expected behavior. If it fails (meaning that the folder was created and sandbox is not working as expected) an alert will show up and app will not run at all.
 
 ## Hardening Ideas
 * Force Adium to use its own keychain for login items so we can further tighten the sandbox? right now the sandbox allows acess to all keychain files. Is this possible?
 * Check if it's possible to harden sandbox access to IOKit.
 * Start cleaning up libpurple: remove all unsupported protocols and junk we don't need for a start.
+* Separate Adium GUI/OTR from libpurple via XPC(?) and sandbox libpurple (interesting if libpurple can be isolated just to network and no access to keychains).
 
 ## TODO List
 * Upgrade libotr to 4.x branch. Adium 1.6 already did this work so it's a matter of copying the necessary code
