@@ -53,6 +53,10 @@ Sandbox profile in Resources/adium_sandbox.sb. Any sandbox errors reports are we
 
 When you start AdiumNG it will try to create a folder ~/adium_sandboxtest to see if the sandbox is working. So error message in logs about this is expected. If it fails an alert will show up and app will not run.
 
+## Hardening Ideas
+* Force Adium to use its own keychain for login items so we can further tighten the sandbox? right now the sandbox allows acess to all keychain files. Is this possible?
+* Check if it's possible to harden sandbox access to IOKit.
+* Start cleaning up libpurple: remove all unsupported protocols and junk we don't need for a start.
 
 ## TODO List
 * Upgrade libotr to 4.x branch. Adium 1.6 already did this work so it's a matter of copying the necessary code
