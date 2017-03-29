@@ -45,7 +45,7 @@ If you want to do hipster open source shit and just bitch about this and that an
 * Apple for the code signing certificate
 
 ## Special Notes
-* Adium-NG-29-03-2017-Release-signed-sandboxed.dmg
+* Adium-NG-29-03-2017-Release-signed-sandboxed-fixed.dmg
 
  This version is finally sandboxed. The sandbox is configured to run from /Applications, so if you want to test this you need to rename old Adium.app to something else. File transfers will not work since sandbox is already pretty tight. 
 
@@ -53,17 +53,18 @@ Sandbox profile in Resources/adium_sandbox.sb. Any sandbox errors reports are we
 
 When you start AdiumNG it will try to create a folder ~/adium_sandboxtest to see if the sandbox is working. So error message in logs about this is expected. If it fails an alert will show up and app will not run.
 
-BUG: when it asks for keychain access if you select always allow it will not work. Sandbox profile is missing some items for this. Will fix soon.
 
 ## TODO List
 * Upgrade libotr to 4.x branch. Adium 1.6 already did this work so it's a matter of copying the necessary code
 * Get rid of brew requirement for building
-* Sandbox profile
+* ~~Sandbox profile~~
+* ~~Code signing~~
 * Get rid of file transfer support (less is more, file transfers have no place here)
 * Get rid of libpurple or audit that shit (one of the reasons to support a single protocol)
 * Remove more fat still there
 * Some other stuff I can't remember right now :P
 
 ## Hashes
-SHA256(Adium-NG-28-03-2017-Release-Debug.dmg)= 4787008bb3e58e731e8eef3e64818ba9c8d8c85e20ab365ca038d51d079c256f
-SHA256(Adium-NG-29-03-2017-Release-signed-sandboxed.dmg)= 2dfdedee9ad7d24e8f5d86496a0ab4378ab7fb42f7c780658f17ccc9cb7e2f6a
+* SHA256(Adium-NG-28-03-2017-Release-Debug.dmg)= 4787008bb3e58e731e8eef3e64818ba9c8d8c85e20ab365ca038d51d079c256f
+* SHA256(Adium-NG-29-03-2017-Release-signed-sandboxed.dmg)= 2dfdedee9ad7d24e8f5d86496a0ab4378ab7fb42f7c780658f17ccc9cb7e2f6a
+* SHA256(Adium-NG-29-03-2017-Release-signed-sandboxed-fixed.dmg)= ffe11a4b6933f6553238a4ca1d9127319dc3abf567cdfb919427c28ef9d35439
