@@ -53,6 +53,8 @@ Sandbox profile in Resources/adium_sandbox.sb. Any sandbox errors reports are we
 
 When you start AdiumNG it will try to create a folder ~/adium_sandboxtest to see if the sandbox is working. So error message in logs about this is expected. If it fails an alert will show up and app will not run.
 
+BUG: when it asks for keychain access if you select always allow it will not work. Sandbox profile is missing some items for this. Will fix soon.
+
 ## TODO List
 * Upgrade libotr to 4.x branch. Adium 1.6 already did this work so it's a matter of copying the necessary code
 * Get rid of brew requirement for building
