@@ -40,6 +40,19 @@ Most definitely when the source is out. As long your contributions fit my goals 
 
 If you want to do hipster open source shit and just bitch about this and that and why I removed this and that and not supporting this and that, I have bad news for you: this is a 100% dictatorship project. If you don't like it, fork it and get the fuck out :P
 
+## Thanks
+* Original Adium developers for all their effort
+* Apple for the code signing certificate
+
+## Special Notes
+* Adium-NG-29-03-2017-Release-signed-sandboxed.dmg
+
+ This version is finally sandboxed. The sandbox is configured to run from /Applications, so if you want to test this you need to rename old Adium.app to something else. File transfers will not work since sandbox is already pretty tight. 
+
+Sandbox profile in Resources/adium_sandbox.sb. Any sandbox errors reports are welcome. 
+
+When you start AdiumNG it will try to create a folder ~/adium_sandboxtest to see if the sandbox is working. So error message in logs about this is expected. If it fails an alert will show up and app will not run.
+
 ## TODO List
 * Upgrade libotr to 4.x branch. Adium 1.6 already did this work so it's a matter of copying the necessary code
 * Get rid of brew requirement for building
@@ -51,3 +64,4 @@ If you want to do hipster open source shit and just bitch about this and that an
 
 ## Hashes
 SHA256(Adium-NG-28-03-2017-Release-Debug.dmg)= 4787008bb3e58e731e8eef3e64818ba9c8d8c85e20ab365ca038d51d079c256f
+SHA256(Adium-NG-29-03-2017-Release-signed-sandboxed.dmg)= 2dfdedee9ad7d24e8f5d86496a0ab4378ab7fb42f7c780658f17ccc9cb7e2f6a
